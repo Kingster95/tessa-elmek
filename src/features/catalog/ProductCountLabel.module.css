@@ -1,0 +1,9 @@
+.root {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.root:empty {
+  display: none;
+}

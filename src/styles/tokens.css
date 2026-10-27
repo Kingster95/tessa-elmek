@@ -1,0 +1,182 @@
+/*
+ * Design tokens – the single source of truth for colors, fonts, radii and
+ * spacing. Every component reads from these variables; no raw values elsewhere.
+ * Values come from the design mockups in /design.
+ *
+ * Themes: the light palette is the default. The dark palette overrides the
+ * same variable names under `:root[data-theme="dark"]`, so components never
+ * know which theme is active. `data-theme` is set before first paint by the
+ * inline script in index.html and kept in sync by ThemeProvider.
+ */
+:root {
+  color-scheme: light;
+
+  /* Colors */
+  --color-navy: #0f1b2d;
+  --color-navy-raised: #1a2a42;
+  --color-navy-border: #2b3d57;
+  --color-navy-muted: #50627a;
+  --color-brand: #1f5fbf;
+  --color-brand-hover: #164a96;
+  --color-brand-soft: rgba(31, 95, 191, 0.1);
+  --color-accent: #f5b301;
+  --color-accent-hover: #e3a500;
+  --color-bg: #f4f5f2;
+  --color-surface: #ffffff;
+  --color-white: #ffffff;
+  /* 3:1 against white so text-field boundaries stay visible (WCAG 1.4.11) */
+  --color-border-input: #8a94a0;
+  --color-surface-muted: #e9ecef;
+  --color-border: #dce0e4;
+  --color-border-strong: #c3c9d0;
+  --color-text: #0f1b2d;
+  --color-text-secondary: #3f4a58;
+  --color-text-muted: #5a6573;
+  --color-text-on-dark: #c9d2dd;
+  --color-text-on-dark-muted: #8a9ab0;
+  /* Text placed on the yellow accent (primary buttons, count badge) */
+  --color-text-on-accent: #0f1b2d;
+  --color-error: #b3261e;
+  --color-error-soft: #fbeae8;
+  --color-error-border: rgba(179, 38, 30, 0.25);
+  --color-success: #1b7f3b;
+  --color-success-soft: #e6f4ea;
+  /* Filled success control (white text on it): stays dark enough in both themes */
+  --color-success-strong: #1b7f3b;
+  --color-partner-primary: #b3261e;
+  --color-partner-muted: #8a94a0;
+
+  /* Theme toggle */
+  --toggle-track: #e9ecef;
+  --toggle-track-border: #c3c9d0;
+  --toggle-thumb: #ffffff;
+  --toggle-icon: #d99a00;
+
+  /* Typography */
+  --font-heading: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-md: 16px;
+  --text-lg: 17px;
+  --text-xl: 19px;
+  --heading-sm: 20px;
+  --heading-md: 24px;
+  --heading-lg: 28px;
+  --heading-xl: 32px;
+  --heading-2xl: 40px;
+  --heading-3xl: clamp(34px, 3vw + 24px, 48px);
+  --heading-hero: clamp(34px, 4vw + 18px, 60px);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+  --tracking-label: 0.12em;
+  --tracking-brand: 0.04em;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 12px;
+  --radius-pill: 999px;
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 56px;
+  --space-12: 64px;
+  --space-13: 72px;
+  --space-14: 88px;
+  --space-15: 96px;
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-pad: 32px;
+  --control-height: 44px;
+  --control-height-lg: 52px;
+  --touch-target: 44px;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(15, 27, 45, 0.06);
+  --shadow-md: 0 6px 20px rgba(15, 27, 45, 0.1);
+  --shadow-lg: 0 16px 40px rgba(15, 27, 45, 0.18);
+  --focus-ring: 0 0 0 3px rgba(31, 95, 191, 0.35);
+  --overlay-light: rgba(255, 255, 255, 0.08);
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms ease;
+
+  /* Z-index */
+  --z-header: 40;
+  --z-menu: 50;
+  --z-toast: 60;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --container-pad: 16px;
+  }
+}
+
+/*
+ * Dark theme. Surfaces step up from the page background (bg < surface <
+ * surface-muted) so cards still read as cards; the navy bands keep the brand
+ * navy and sit just above the page background. Text and link colors are
+ * lifted so that every pairing keeps at least 4.5:1.
+ */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-navy: #0f1b2d;
+  --color-navy-raised: #1a2a42;
+  --color-navy-border: #2b3d57;
+  --color-navy-muted: #50627a;
+  --color-brand: #6b9fe9;
+  --color-brand-hover: #93b9f1;
+  --color-brand-soft: rgba(107, 159, 233, 0.16);
+  --color-accent: #f5b301;
+  --color-accent-hover: #ffc62e;
+  --color-bg: #0a111c;
+  --color-surface: #162236;
+  --color-surface-muted: #1e2c42;
+  --color-border-input: #6b7b90;
+  --color-border: #2a3a50;
+  --color-border-strong: #3d4f68;
+  --color-text: #e8edf3;
+  --color-text-secondary: #b9c4d1;
+  --color-text-muted: #93a1b3;
+  --color-text-on-dark: #c9d2dd;
+  --color-text-on-dark-muted: #8a9ab0;
+  --color-text-on-accent: #0f1b2d;
+  --color-error: #f28b82;
+  --color-error-soft: rgba(242, 139, 130, 0.12);
+  --color-error-border: rgba(242, 139, 130, 0.35);
+  --color-success: #6cc98a;
+  --color-success-soft: rgba(108, 201, 138, 0.12);
+  --color-success-strong: #1b7f3b;
+  --color-partner-primary: #ff8078;
+  --color-partner-muted: #93a1b3;
+
+  --toggle-track: #1e2c42;
+  --toggle-track-border: #3d4f68;
+  --toggle-thumb: #f5b301;
+  --toggle-icon: #0f1b2d;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --focus-ring: 0 0 0 3px rgba(107, 159, 233, 0.45);
+}

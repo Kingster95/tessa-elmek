@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Electro Distribution — Produs</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5FBF}a:hover{color:#164A96}
+</style>
+</helmet>
+<div style="font-family: 'IBM Plex Sans', 'Helvetica Neue', sans-serif; color: #0F1B2D; background: #F4F5F2; min-height: 100vh">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #DCE0E4">
+<div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #0F1B2D">
+<svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true"><path d="M2 2h12l14 15-14 15H2l14-15z" fill="#1F5FBF"></path></svg>
+<span style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.04em">ELECTRO DISTRIBUTION</span>
+</a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; font-weight: 500; font-size: 15px; flex-grow: 1">
+<a href="Category.dc.html" style="color: #1F5FBF; text-decoration: none; font-weight: 600">Produse</a>
+<a href="#" style="color: #0F1B2D; text-decoration: none">Parteneri</a>
+<a href="#" style="color: #0F1B2D; text-decoration: none">Clienți</a>
+<a href="#" style="color: #0F1B2D; text-decoration: none">Noutăți</a>
+<a href="#" style="color: #0F1B2D; text-decoration: none">Descărcări</a>
+<a href="#" style="color: #0F1B2D; text-decoration: none">Contact</a>
+</nav>
+<a href="#oferta" style="height: 44px; display: flex; align-items: center; gap: 10px; padding: 0 18px; border: 1px solid #C3C9D0; color: #0F1B2D; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 15px">Lista de ofertă <span style="background: #F5B301; border-radius: 10px; padding: 1px 8px; font-size: 13px">2</span></a>
+</div>
+</header>
+
+<div style="max-width: 1280px; margin: 0 auto; padding: 28px 32px 0">
+<nav aria-label="Breadcrumb" style="font-size: 14px; color: #5A6573; display: flex; flex-wrap: wrap; gap: 8px">
+<a href="Main.dc.html">Acasă</a><span>/</span><a href="Category.dc.html">Circutor</a><span>/</span><a href="Category.dc.html">Contorizare și analiza calității energiei</a><span>/</span><span>[Nume produs]</span>
+</nav>
+</div>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 28px 32px 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="height: 480px; background: #FFFFFF; border: 1px solid #DCE0E4; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #5A6573">[Imagine principală produs]</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+<button aria-label="Imagine 1" style="height: 88px; background: #E9ECEF; border: 2px solid #1F5FBF; border-radius: 8px; cursor: pointer"></button>
+<button aria-label="Imagine 2" style="height: 88px; background: #E9ECEF; border: 1px solid #DCE0E4; border-radius: 8px; cursor: pointer"></button>
+<button aria-label="Imagine 3" style="height: 88px; background: #E9ECEF; border: 1px solid #DCE0E4; border-radius: 8px; cursor: pointer"></button>
+<button aria-label="Imagine 4" style="height: 88px; background: #E9ECEF; border: 1px solid #DCE0E4; border-radius: 8px; cursor: pointer"></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 5px 10px; background: #FFFFFF; border: 1px solid #DCE0E4; border-radius: 4px">CIRCUTOR</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 5px 10px; background: #FFFFFF; border: 1px solid #DCE0E4; border-radius: 4px">Cod: [cod produs]</span>
+</div>
+<h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 44px; line-height: 1.08">[Nume produs]</h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #3F4A58">[Descriere scurtă: ce face produsul, unde se montează și pentru ce aplicații este recomandat.]</p>
+<div style="display: flex; flex-direction: column; gap: 0; border-top: 1px solid #DCE0E4">
+<sc-for list="{{keys}}" as="k" hint-placeholder-count="4">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #DCE0E4; font-size: 15px">
+<span style="color: #5A6573">{{k}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">[valoare]</span>
+</div>
+</sc-for>
+</div>
+<div id="oferta" style="display: flex; flex-wrap: wrap; gap: 12px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="qty" style="font-size: 14px; font-weight: 600">Cantitate</label>
+<input id="qty" type="number" value="1" min="1" style="width: 96px; height: 52px; box-sizing: border-box; padding: 0 14px; border: 1px solid #C3C9D0; border-radius: 6px; font: inherit; font-size: 16px; background: #FFFFFF">
+</div>
+<button style="height: 52px; padding: 0 26px; border: 0; border-radius: 6px; background: #F5B301; color: #0F1B2D; font: inherit; font-weight: 600; font-size: 16px; cursor: pointer; flex-grow: 1">Adaugă în lista de ofertă</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px">
+<a href="#" style="font-weight: 600">Descarcă fișa tehnică (PDF)</a>
+<a href="tel:+40212532955" style="font-weight: 600">Întreabă un consultant: 021-253.29.55</a>
+</div>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border-top: 1px solid #DCE0E4; border-bottom: 1px solid #DCE0E4">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 32px">
+<div role="tablist" aria-label="Informații produs" style="display: flex; gap: 8px; border-bottom: 1px solid #DCE0E4; overflow-x: auto">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<button role="tab" aria-selected="{{t.on}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+<div style="padding: 36px 0 56px; max-width: 860px">
+<sc-if value="{{showDesc}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.65; color: #3F4A58">
+<p style="margin: 0">[Descriere completă a produsului: funcții principale, comunicație, montaj.]</p>
+<p style="margin: 0">[Aplicații tipice și avantaje pentru instalator sau beneficiar.]</p>
+</div>
+</sc-if>
+<sc-if value="{{showSpecs}}" hint-placeholder-val="{{false}}">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px">
+<sc-for list="{{specs}}" as="s" hint-placeholder-count="8">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #DCE0E4; font-size: 15px">
+<span style="color: #5A6573">{{s}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px">[valoare]</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{showDocs}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{docs}}" as="d" hint-placeholder-count="3">
+<a href="#" style="display: flex; align-items: center; gap: 16px; padding: 16px 18px; background: #F4F5F2; border: 1px solid #DCE0E4; border-radius: 8px; text-decoration: none; color: #0F1B2D">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5FBF" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"></path></svg>
+<span style="font-weight: 500; flex-grow: 1">{{d}}</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5A6573">PDF</span>
+</a>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 64px 32px 96px; display: flex; flex-direction: column; gap: 28px">
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 28px">Produse similare</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px">
+<sc-for list="{{related}}" as="r" hint-placeholder-count="4">
+<a href="Product.dc.html" style="background: #FFFFFF; border: 1px solid #DCE0E4; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: #0F1B2D">
+<div style="height: 150px; background: #E9ECEF; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5A6573">[Imagine]</div>
+<div style="padding: 16px 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5A6573">[Cod produs]</span>
+<span style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 17px">{{r}}</span>
+</div>
+</a>
+</sc-for>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { tab: 0 }; }
+  renderVals() {
+    const labels = ['Descriere', 'Specificații tehnice', 'Documente'];
+    const base = 'min-height: 52px; padding: 0 20px; border: 0; background: transparent; font: inherit; font-size: 16px; cursor: pointer; white-space: nowrap; ';
+    const tabs = labels.map((l, i) => ({
+      label: l,
+      on: i === this.state.tab ? 'true' : 'false',
+      pick: () => this.setState({ tab: i }),
+      style: base + (i === this.state.tab ? 'font-weight: 600; color: #0F1B2D; box-shadow: inset 0 -3px 0 #1F5FBF' : 'color: #5A6573')
+    }));
+    return {
+      tabs,
+      showDesc: this.state.tab === 0,
+      showSpecs: this.state.tab === 1,
+      showDocs: this.state.tab === 2,
+      keys: ['Tensiune de alimentare', 'Format / montaj', 'Comunicație', 'Clasă de precizie'],
+      specs: ['Tensiune de alimentare', 'Frecvență', 'Curent de măsură', 'Clasă de precizie', 'Comunicație', 'Afișaj', 'Dimensiuni', 'Grad de protecție'],
+      docs: ['Fișă tehnică', 'Manual de instalare', 'Declarație de conformitate'],
+      related: ['[Produs similar 1]', '[Produs similar 2]', '[Produs similar 3]', '[Produs similar 4]']
+    };
+  }
+}
+</script>
+</body>
+</html>

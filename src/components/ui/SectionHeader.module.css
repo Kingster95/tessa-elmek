@@ -1,0 +1,44 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-6);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.title {
+  line-height: 1.15;
+}
+
+.md {
+  font-size: var(--heading-md);
+}
+
+.lg {
+  font-size: var(--heading-lg);
+}
+
+.xl {
+  font-size: var(--heading-2xl);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .xl {
+    font-size: var(--heading-xl);
+  }
+  .lg {
+    font-size: var(--heading-md);
+  }
+}

@@ -1,0 +1,77 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.group {
+  display: inline-flex;
+  align-items: stretch;
+  /* +2px so the inner buttons stay a full 44px tall inside the 1px border */
+  height: calc(var(--control-height) + 2px);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.lg .group {
+  height: calc(var(--control-height-lg) + 2px);
+}
+
+.group:focus-within {
+  border-color: var(--color-brand);
+  box-shadow: var(--focus-ring);
+}
+
+.step {
+  width: var(--touch-target);
+  min-width: var(--touch-target);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: background-color var(--transition-fast);
+}
+
+.step:hover:not([aria-disabled='true']) {
+  background: var(--color-surface-muted);
+}
+
+.step[aria-disabled='true'] {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+  cursor: default;
+}
+
+.step:focus-visible {
+  outline-offset: -3px;
+  border-radius: 0;
+}
+
+.input {
+  width: 64px;
+  min-width: 0;
+  border: 0;
+  border-inline: 1px solid var(--color-border);
+  text-align: center;
+  font-size: var(--text-md);
+  font-weight: 500;
+  background: var(--color-surface);
+}
+
+.lg .input {
+  width: 72px;
+}
+
+.input:focus-visible {
+  outline: none;
+}

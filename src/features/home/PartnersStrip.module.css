@@ -1,0 +1,69 @@
+.root {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-9);
+  padding-block: var(--space-7);
+}
+
+.label {
+  line-height: var(--leading-normal);
+}
+
+.status {
+  flex: 1 1 320px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-9);
+  list-style: none;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-partner-muted);
+  text-decoration: none;
+}
+
+.featured {
+  font-size: 22px;
+  color: var(--color-partner-primary);
+}
+
+a.wordmark:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+a.featured:hover {
+  color: var(--color-partner-primary);
+}
+
+@media (max-width: 640px) {
+  .inner {
+    gap: var(--space-2) var(--space-6);
+    padding-block: var(--space-4);
+  }
+
+  .list {
+    gap: 0 var(--space-6);
+  }
+
+  /* Wordmarks keep 20px/700 on phones: at that size the muted grey still
+     counts as large text, so the 3:1 contrast requirement is met. */
+}

@@ -1,0 +1,56 @@
+.root {
+  padding-block: var(--space-15) var(--space-9);
+}
+
+.header {
+  margin-bottom: var(--space-9);
+}
+
+.headerLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.headerLink:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  /* 300px minimum gives a 3 × 2 layout for the six categories on desktop */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: var(--space-5);
+  list-style: none;
+}
+
+/* Let the card stretch to the row height so tiles in one row align. */
+.cell {
+  display: flex;
+  min-width: 0;
+}
+
+.cell > * {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 640px) {
+  .root {
+    padding-block: var(--space-9) var(--space-2);
+  }
+
+  .header {
+    margin-bottom: var(--space-5);
+  }
+
+  /* The phone mockup shows this title at 24px (SectionHeader xl is 32px there). */
+  .root .header h2 {
+    font-size: var(--heading-md);
+  }
+
+  .grid {
+    gap: var(--space-3);
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tessa Elmek – distribuitor de echipamente electrice: aparate de măsură, protecție, contorizare, corectarea factorului de putere și stații de încărcare pentru vehicule electrice." />
+    <meta name="theme-color" content="#0F1B2D" />
+    <script>
+      // Applies the saved (or system) theme before first paint so the page
+      // never flashes light. Key and attribute mirror src/features/theme/theme.ts.
+      (function () {
+        try {
+          var saved = localStorage.getItem('tessa-elmek.theme.v1');
+          var theme = saved === 'dark' || saved === 'light'
+            ? saved
+            : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+    <title>Tessa Elmek – Echipamente electrice</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

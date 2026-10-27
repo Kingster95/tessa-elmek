@@ -1,0 +1,33 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-9);
+  align-items: start;
+}
+
+.heading {
+  font-size: var(--heading-md);
+  margin-bottom: var(--space-5);
+}
+
+.listColumn,
+.formColumn {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+}
+
+/*
+ * The form is ~840px tall. Pin it only when the viewport can show all of it,
+ * otherwise the submit button would sit below the fold on 1280×720 laptops.
+ */
+@media (min-width: 1024px) and (min-height: 900px) {
+  .formColumn {
+    position: sticky;
+    top: var(--space-6);
+  }
+}

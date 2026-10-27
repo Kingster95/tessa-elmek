@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 1023px) {
+  .root {
+    gap: var(--space-5);
+  }
+}

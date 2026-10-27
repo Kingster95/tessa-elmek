@@ -1,0 +1,13 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: var(--space-9);
+  padding-block: var(--space-8) var(--space-15);
+}
+
+@media (max-width: 640px) {
+  .root {
+    gap: var(--space-8);
+    padding-block: var(--space-6) var(--space-11);
+  }
+}

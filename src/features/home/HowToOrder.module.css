@@ -1,0 +1,110 @@
+.root {
+  padding-block: var(--space-12);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+  padding: var(--space-10);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+}
+
+/* The mockup uses 32px here; SectionHeader's sizes are 28px / 40px. */
+.root .header h2 {
+  font-size: var(--heading-xl);
+  line-height: 1.15;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-8);
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 3px solid var(--color-accent);
+  padding-top: var(--space-5);
+}
+
+.number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: var(--heading-lg);
+  line-height: 1;
+  color: var(--color-brand);
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.stepTitle {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: var(--leading-snug);
+}
+
+.stepText {
+  font-size: var(--text-base);
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 640px) {
+  .root {
+    padding-block: var(--space-6);
+  }
+
+  .card {
+    gap: 18px;
+    padding: var(--space-6) var(--space-5);
+    border-radius: var(--radius-xl);
+  }
+
+  .root .header h2 {
+    font-size: 22px;
+  }
+
+  .steps {
+    gap: 18px;
+  }
+
+  /* Number and text side by side, as in the phone mockup. */
+  .step {
+    flex-direction: row;
+    gap: 14px;
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .number {
+    width: 20px;
+    flex-shrink: 0;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .stepBody {
+    gap: var(--space-1);
+  }
+
+  .stepTitle {
+    font-size: var(--text-base);
+  }
+
+  .stepText {
+    font-size: 14px;
+    line-height: var(--leading-normal);
+  }
+}

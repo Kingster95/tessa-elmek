@@ -1,0 +1,123 @@
+.root {
+  --track-w: 52px;
+  --track-h: 28px;
+  --thumb: 22px;
+  --thumb-inset: 2px;
+  --travel: calc(var(--track-w) - 2px - var(--thumb) - 2 * var(--thumb-inset));
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--touch-target);
+  height: var(--touch-target);
+  padding: 0;
+  flex-shrink: 0;
+  border-radius: var(--radius-pill);
+  color: var(--color-text);
+}
+
+.root:focus-visible {
+  outline: none;
+}
+
+.root:focus-visible .track {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.track {
+  position: relative;
+  display: block;
+  width: var(--track-w);
+  height: var(--track-h);
+  border-radius: var(--radius-pill);
+  background: var(--toggle-track);
+  border: 1px solid var(--toggle-track-border);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-fast);
+}
+
+.root:hover .track {
+  border-color: var(--color-text-muted);
+}
+
+.thumb {
+  position: absolute;
+  top: var(--thumb-inset);
+  left: var(--thumb-inset);
+  display: grid;
+  place-items: center;
+  width: var(--thumb);
+  height: var(--thumb);
+  border-radius: 50%;
+  background: var(--toggle-thumb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+  transform: translateX(0);
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color var(--transition-base);
+}
+
+.root[aria-checked="true"] .thumb {
+  transform: translateX(var(--travel));
+}
+
+.root:hover .thumb {
+  transform: translateX(0) scale(1.08);
+}
+
+.root[aria-checked="true"]:hover .thumb {
+  transform: translateX(var(--travel)) scale(1.08);
+}
+
+.icon {
+  grid-area: 1 / 1;
+  width: 14px;
+  height: 14px;
+  color: var(--toggle-icon);
+  transition:
+    opacity 200ms ease,
+    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+
+.root[aria-checked="true"] .sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.4);
+}
+
+.root[aria-checked="true"] .moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+@media (max-width: 640px) {
+  .root {
+    --track-w: 46px;
+    --track-h: 26px;
+    --thumb: 20px;
+  }
+  .icon {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .root {
+    --track-w: 42px;
+    --track-h: 24px;
+    --thumb: 18px;
+  }
+}

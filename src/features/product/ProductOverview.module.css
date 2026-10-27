@@ -1,0 +1,17 @@
+.breadcrumb {
+  padding-top: var(--space-7);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  gap: var(--space-8);
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-11);
+}
+
+@media (min-width: 641px) {
+  .grid {
+    gap: var(--space-11);
+  }
+}

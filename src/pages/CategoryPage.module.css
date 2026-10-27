@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-9);
+  padding-block: var(--space-9) var(--space-15);
+}
+
+.sidebar {
+  flex: 1 1 260px;
+  max-width: 300px;
+}
+
+.main {
+  flex: 3 1 560px;
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .layout {
+    gap: var(--space-8);
+  }
+
+  .sidebar {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .layout {
+    gap: var(--space-6);
+    padding-block: var(--space-6) var(--space-12);
+  }
+}

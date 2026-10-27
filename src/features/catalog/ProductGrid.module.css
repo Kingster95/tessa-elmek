@@ -1,0 +1,16 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-5);
+  list-style: none;
+  transition: opacity var(--transition-fast);
+}
+
+.grid[aria-busy='true'] {
+  opacity: 0.6;
+}
+
+.item {
+  display: grid;
+  min-width: 0;
+}

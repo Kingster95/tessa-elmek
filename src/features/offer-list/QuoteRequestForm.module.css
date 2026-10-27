@@ -1,0 +1,86 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.title {
+  font-size: var(--heading-md);
+}
+
+.intro {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.summary {
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-error-soft);
+  border: 1px solid var(--color-error);
+  border-left-width: 4px;
+  border-radius: var(--radius-lg);
+}
+
+.summaryTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-error);
+}
+
+.summaryList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  padding-left: var(--space-5);
+  font-size: 14px;
+}
+
+.summaryLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+.summaryLink:hover {
+  color: var(--color-error);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* Focus target after a failed submission; rounded so the outline hugs the card. */
+.submitError {
+  border-radius: var(--radius-xl);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.note {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .root {
+    padding: var(--space-5) var(--space-4);
+  }
+}

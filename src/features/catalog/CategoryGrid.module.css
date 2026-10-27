@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  /* 300px minimum gives a 3 × 2 layout for the six categories on desktop */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+}

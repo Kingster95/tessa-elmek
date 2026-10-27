@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Electro Distribution — Mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5FBF}a:hover{color:#164A96}
+</style>
+</helmet>
+<div style="width: 390px; height: 1880px; overflow: hidden; font-family: 'IBM Plex Sans', 'Helvetica Neue', sans-serif; color: #0F1B2D; background: #F4F5F2; display: flex; flex-direction: column">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #DCE0E4; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #0F1B2D">
+<svg width="20" height="24" viewBox="0 0 30 34" aria-hidden="true"><path d="M2 2h12l14 15-14 15H2l14-15z" fill="#1F5FBF"></path></svg>
+<span style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.04em">ELECTRO DISTRIBUTION</span>
+</a>
+<button aria-label="Meniu" style="width: 44px; height: 44px; border: 1px solid #DCE0E4; border-radius: 6px; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</header>
+
+<section style="background: #0F1B2D; color: #FFFFFF; padding: 40px 20px 36px; display: flex; flex-direction: column; gap: 18px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #F5B301">DISTRIBUITOR · DIN 2003</span>
+<h1 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 34px; line-height: 1.08">Măsurare, protecție și eficiență energetică.</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #C9D2DD">Alegeți produsele și primiți o ofertă personalizată.</p>
+<label for="msearch" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Caută produse</label>
+<input id="msearch" type="search" placeholder="Caută cod sau produs" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 0; border-radius: 6px; font: inherit; font-size: 15px">
+<a href="Category.dc.html" style="height: 48px; display: flex; align-items: center; justify-content: center; background: #F5B301; color: #0F1B2D; border-radius: 6px; font-weight: 600; text-decoration: none">Vezi catalogul</a>
+</section>
+
+<section style="padding: 32px 20px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0 0 8px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 24px">Gama de produse</h2>
+<sc-for list="{{categories}}" as="c" hint-placeholder-count="5">
+<a href="Category.dc.html" style="display: flex; align-items: center; gap: 14px; padding: 12px; background: #FFFFFF; border: 1px solid #DCE0E4; border-radius: 8px; text-decoration: none; color: #0F1B2D">
+<div style="width: 64px; height: 64px; flex-shrink: 0; background: #E9ECEF; border-radius: 6px"></div>
+<span style="font-weight: 600; font-size: 15px; line-height: 1.3; flex-grow: 1">{{c}}</span>
+<span aria-hidden="true" style="color: #5A6573">›</span>
+</a>
+</sc-for>
+</section>
+
+<section style="margin: 0 20px; background: #FFFFFF; border: 1px solid #DCE0E4; border-radius: 10px; padding: 24px 20px; display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 22px">Cum comanzi</h2>
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+<div style="display: flex; gap: 14px">
+<span style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 22px; color: #1F5FBF; width: 20px">{{s.n}}</span>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-weight: 600">{{s.title}}</span>
+<span style="font-size: 14px; line-height: 1.5; color: #5A6573">{{s.text}}</span>
+</div>
+</div>
+</sc-for>
+</section>
+
+<footer style="margin-top: 32px; background: #0F1B2D; color: #C9D2DD; padding: 32px 20px; display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.5; flex-grow: 1">
+<span style="font-weight: 600; color: #FFFFFF; font-size: 17px">Contact</span>
+<span>Str. Mecet nr. 42-44, Sector 2, 024086 București</span>
+<a href="tel:+40212532955" style="height: 48px; display: flex; align-items: center; justify-content: center; border: 1px solid #50627A; border-radius: 6px; color: #FFFFFF; text-decoration: none; font-weight: 600">Sună: 021-253.29.55</a>
+<a href="mailto:office@electrodistribution.ro" style="color: #F5B301">office@electrodistribution.ro</a>
+<span style="font-size: 13px; color: #8A9AB0; margin-top: 8px">ELECTRO DISTRIBUTION S.R.L. · RO15262565 · J40/3337/2003</span>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1880}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      categories: [
+        'Aparate pentru măsură și control electric',
+        'Protecție și control electric',
+        'Contorizare și analiza calității energiei',
+        'Corectarea factorului de putere și filtrarea armonicilor',
+        'Sisteme de încărcare pentru vehicule electrice'
+      ],
+      steps: [
+        { n: '1', title: 'Alegi produsele', text: 'Caută după cod sau pe categorii.' },
+        { n: '2', title: 'Trimiți cererea', text: 'Datele firmei și cantitățile dorite.' },
+        { n: '3', title: 'Primești oferta', text: 'Prețuri, disponibilitate și termen de livrare.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

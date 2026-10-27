@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-12);
+}
+
+.title {
+  font-size: var(--heading-lg);
+}
+
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-5);
+}
+
+@media (min-width: 641px) {
+  .root {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-15);
+  }
+}

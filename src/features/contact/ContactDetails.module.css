@@ -1,0 +1,115 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8);
+}
+
+.title {
+  font-size: var(--heading-md);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  /* The label column shrinks on tablets so values never break mid-token. */
+  grid-template-columns: minmax(104px, 160px) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-4);
+  align-items: start;
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.row:last-child {
+  padding-bottom: 0;
+}
+
+.term {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  line-height: 24px;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--color-brand);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: 24px;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.address {
+  font-style: normal;
+}
+
+.muted {
+  color: var(--color-text-muted);
+}
+
+/*
+ * Tappable rows: the link keeps a 44px target while its text stays aligned
+ * with the label, so the extra height is absorbed by negative margins.
+ */
+.link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: var(--touch-target);
+  margin-block: calc((24px - var(--touch-target)) / 2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.mapsLink {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mapsLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .root {
+    padding: var(--space-5);
+    gap: var(--space-5);
+  }
+
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+    padding-block: var(--space-3);
+  }
+}

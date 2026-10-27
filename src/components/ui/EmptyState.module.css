@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  padding: var(--space-10) var(--space-6);
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-xl);
+}
+
+.icon {
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--heading-sm);
+}
+
+.description {
+  max-width: 48ch;
+  color: var(--color-text-muted);
+  line-height: var(--leading-normal);
+}
+
+.action {
+  margin-top: var(--space-2);
+}

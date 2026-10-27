@@ -1,0 +1,161 @@
+.root {
+  margin-top: auto;
+  background: var(--color-navy);
+  color: var(--color-text-on-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-9);
+  padding-block: var(--space-13) var(--space-9);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: var(--tracking-brand);
+  color: var(--color-white);
+}
+
+.heading {
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.legal {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-5);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  margin-block: -6px;
+  color: var(--color-text-on-dark);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-style: normal;
+}
+
+.address .link {
+  /* inline inside a sentence: keep the line height, extend the hit area */
+  margin-block: -10px;
+  font-size: inherit;
+}
+
+.email {
+  color: var(--color-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  margin-block: -6px;
+}
+
+.email:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.muted {
+  color: var(--color-text-on-dark-muted);
+}
+
+.schedule {
+  font-size: var(--text-base);
+}
+
+.mapCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 160px;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--color-navy-raised);
+  border: 1px solid var(--color-navy-border);
+  color: var(--color-text-on-dark-muted);
+}
+
+.mapLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mapLink:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.bottom {
+  padding-block: var(--space-5) var(--space-8);
+  border-top: 1px solid var(--color-navy-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-on-dark-muted);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    padding-block: var(--space-9) var(--space-8);
+    gap: var(--space-8);
+  }
+}
+
+/* Phones (390px mockup): a full-width "Sună" button replaces the inline line. */
+.phoneButton {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .phoneLine {
+    display: none;
+  }
+
+  .phoneButton {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+  }
+}

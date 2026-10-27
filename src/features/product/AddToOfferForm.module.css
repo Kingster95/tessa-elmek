@@ -1,0 +1,25 @@
+.root {
+  min-width: 0;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-end;
+}
+
+.submit {
+  flex-grow: 1;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-success);
+}
+
+.status:empty {
+  margin-top: 0;
+}
